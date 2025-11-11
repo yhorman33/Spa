@@ -1,30 +1,38 @@
-# Generación T - Plataforma para la Nueva Generación
+# Spa & Wellness - Sitio Web Profesional
 
-## 🚀 Descripción del Proyecto
+## 🧘‍♀️ Descripción del Proyecto
 
-**Generación T** es una plataforma moderna y vibrante diseñada para conectar, empoderar e inspirar a la nueva generación de creadores, desarrolladores y emprendedores digitales. Nuestro objetivo es proporcionar un espacio donde los jóvenes talentos puedan aprender, colaborar y construir su futuro profesional.
+Sitio web moderno y elegante para un **centro de spa y bienestar**, diseñado para transmitir tranquilidad, profesionalismo y lujo. Este proyecto fue desarrollado como parte de un trabajo académico para **Generación T**.
+
+El sitio ofrece una experiencia visual relajante con tonos azules y verdes agua, destacando los servicios de masajes, tratamientos faciales, aromaterapia y bienestar integral.
 
 ## ✨ Características Principales
 
-### 🎯 Comunidad Vibrante
-- **10,000+ miembros activos** compartiendo conocimientos y experiencias
-- Networking con profesionales de tu generación
-- Colaboración en proyectos reales
+### 🌊 Diseño Relajante
+- Paleta de colores inspirada en el agua y la naturaleza (azul, verde agua, lavanda)
+- Gradientes suaves y animaciones fluidas
+- Diseño responsive para todos los dispositivos
+- Experiencia de usuario intuitiva y elegante
 
-### 🚀 Aprendizaje Acelerado
-- Recursos educativos actualizados constantemente
-- Tutoriales interactivos y dinámicos
-- Contenido adaptado a las tendencias más relevantes
+### 💆‍♀️ Servicios Destacados
+- **Masajes terapéuticos**: Técnicas profesionales personalizadas
+- **Tratamientos faciales**: Rejuvenecimiento con tecnología premium
+- **Tratamientos corporales**: Exfoliación e hidratación completa
+- **Aromaterapia**: Aceites esenciales naturales
+- **Productos orgánicos**: Certificados y naturales
+- **Ambiente zen**: Espacios diseñados para la relajación
 
-### 🏆 Desarrollo Profesional
-- Sistema de logros y reconocimientos
-- Portfolio profesional integrado
-- Oportunidades de crecimiento y mentoría
+### 📊 Estadísticas del Negocio
+- **15+ años** de experiencia en el sector
+- **5,000+ clientes** satisfechos
+- **98%** de recomendación
+- **20+ tratamientos** disponibles
 
-### 🌍 Alcance Global
-- Red internacional de talento joven
-- Eventos virtuales y presenciales
-- Soporte 24/7 en múltiples idiomas
+### 🎨 Experiencia Visual
+- Hero section con imagen de spa relajante
+- Cards de servicios con iconos y animaciones
+- Call-to-action persuasivo con oferta especial
+- Sistema de diseño coherente y profesional
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -41,23 +49,24 @@ Este proyecto está construido con las tecnologías web más modernas:
 
 El proyecto implementa un sistema de diseño completo con:
 
-- **Gradientes vibrantes**: Combinaciones de púrpura, rosa y naranja
-- **Animaciones fluidas**: Transiciones suaves y efectos hover
+- **Colores relajantes**: Azul agua, verde menta y lavanda
+- **Gradientes suaves**: Transiciones naturales y armoniosas
+- **Animaciones zen**: Movimientos fluidos y sutiles
 - **Tokens semánticos**: Colores y estilos centralizados en HSL
-- **Responsivo**: Optimizado para todos los dispositivos
+- **Responsive**: Optimizado para todos los dispositivos
 - **Modo oscuro**: Soporte completo para temas claro/oscuro
 
 ### Paleta de Colores
 
 ```css
-/* Gradientes principales */
---gradient-primary: linear-gradient(135deg, hsl(280 85% 60%), hsl(320 90% 65%));
---gradient-accent: linear-gradient(135deg, hsl(320 90% 65%), hsl(30 95% 60%));
+/* Gradientes principales - Tonos relajantes */
+--gradient-primary: linear-gradient(135deg, hsl(180 60% 45%), hsl(210 70% 60%));
+--gradient-accent: linear-gradient(135deg, hsl(210 70% 60%), hsl(160 50% 50%));
 
-/* Colores base */
---primary: 280 85% 60%;      /* Púrpura vibrante */
---secondary: 320 90% 65%;    /* Rosa energético */
---accent: 30 95% 60%;        /* Naranja cálido */
+/* Colores base - Tema spa */
+--primary: 180 60% 45%;      /* Azul agua */
+--secondary: 210 70% 60%;    /* Azul cielo */
+--accent: 160 50% 50%;       /* Verde menta */
 ```
 
 ## 📦 Instalación y Uso
@@ -74,7 +83,7 @@ El proyecto implementa un sistema de diseño completo con:
 git clone <YOUR_GIT_URL>
 
 # 2. Navegar al directorio del proyecto
-cd generacion-t
+cd spa-website
 
 # 3. Instalar dependencias
 npm install
@@ -117,14 +126,15 @@ Más información: [Setting up a custom domain](https://docs.lovable.dev/feature
 ## 📂 Estructura del Proyecto
 
 ```
-generacion-t/
+spa-website/
 ├── src/
 │   ├── assets/          # Imágenes y recursos estáticos
+│   │   └── spa-hero.jpg # Imagen hero del spa
 │   ├── components/      # Componentes reutilizables
 │   │   ├── ui/         # Componentes base de shadcn
-│   │   ├── Hero.tsx    # Sección hero principal
-│   │   ├── Features.tsx # Características del producto
-│   │   └── CTA.tsx     # Call-to-action
+│   │   ├── Hero.tsx    # Sección hero con reserva
+│   │   ├── Features.tsx # Servicios del spa
+│   │   └── CTA.tsx     # Call-to-action con oferta
 │   ├── pages/          # Páginas de la aplicación
 │   │   ├── Index.tsx   # Página principal
 │   │   └── NotFound.tsx # Página 404
@@ -141,25 +151,25 @@ generacion-t/
 ## 🎯 Componentes Principales
 
 ### Hero
-Sección principal con:
-- Título impactante con gradientes
-- Estadísticas en tiempo real
-- CTAs prominentes
-- Imagen de fondo dinámica
+Sección principal de bienvenida con:
+- Título atractivo sobre bienestar
+- Estadísticas del spa (años de experiencia, clientes)
+- Botones de reserva y ver servicios
+- Imagen de fondo con ambiente zen
 
-### Features
-Grid de características con:
-- 6 características principales
-- Iconos animados
-- Cards con hover effects
+### Features (Servicios)
+Grid de servicios con:
+- 6 servicios principales del spa
+- Iconos temáticos (masajes, tratamientos, aromaterapia)
+- Cards con efectos hover suaves
 - Diseño responsive
 
 ### CTA (Call-to-Action)
 Sección de conversión con:
-- Mensaje persuasivo
-- Botones de acción claros
-- Animaciones flotantes
-- Fondo con gradientes
+- Oferta especial destacada
+- Botones de reserva y contacto
+- Información de horarios
+- Animaciones suaves y relajantes
 
 ## 🤝 Contribuir
 
@@ -204,16 +214,19 @@ Edita `src/index.css` para modificar los tokens de diseño:
 
 ```css
 :root {
-  --primary: TU_COLOR_HSL;
-  --gradient-primary: TU_GRADIENTE;
+  --primary: TU_COLOR_HSL;        /* Color principal */
+  --gradient-primary: TU_GRADIENTE; /* Gradiente principal */
 }
 ```
 
 ### Añadir Nuevas Secciones
 
-1. Crea un componente en `src/components/`
-2. Impórtalo en `src/pages/Index.tsx`
-3. Usa los tokens de diseño existentes
+Puedes agregar secciones como:
+- **Galería de fotos**: Muestra instalaciones y tratamientos
+- **Testimonios**: Opiniones de clientes satisfechos
+- **Precios**: Tabla de tarifas de servicios
+- **Equipo**: Presenta a los terapeutas
+- **Blog**: Consejos de bienestar y cuidado personal
 
 ## 🔒 Seguridad
 
@@ -226,10 +239,13 @@ Edita `src/index.css` para modificar los tokens de diseño:
 
 Este proyecto es parte de Lovable. Consulta los términos de servicio de Lovable para más información.
 
-## 🌟 Agradecimientos
+## 🌟 Créditos
 
-- **shadcn/ui** por los componentes base
-- **Lucide** por los iconos
+Este proyecto fue desarrollado como trabajo académico para **Generación T** (escuela).
+
+**Tecnologías y herramientas utilizadas:**
+- **shadcn/ui** por los componentes base elegantes
+- **Lucide** por los iconos profesionales
 - **Tailwind CSS** por el framework de estilos
 - **Lovable** por la plataforma de desarrollo
 
@@ -241,4 +257,5 @@ Este proyecto es parte de Lovable. Consulta los términos de servicio de Lovable
 
 ---
 
-Hecho con 💜 por la Generación T
+**Proyecto académico - Generación T**  
+Hecho con 💙 para promover el bienestar y la relajación

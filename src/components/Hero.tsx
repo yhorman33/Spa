@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import spaHero from "@/assets/spa-hero.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(${spaHero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -18,37 +18,37 @@ const Hero = () => {
         <div className="animate-slide-up">
           <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Bienvenido a la Generación T</span>
+            <span className="text-sm font-medium">Tu oasis de tranquilidad</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-            Construye tu futuro
+            Renueva tu cuerpo
             <br />
-            con nosotros
+            y tu mente
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Únete a la comunidad de jóvenes talentosos que están transformando el mundo digital. 
-            Aprende, crea y conecta con personas que comparten tu pasión.
+            Experimenta la armonía perfecta entre bienestar y belleza. 
+            Tratamientos profesionales diseñados para tu relajación total.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="lg" className="group">
-              Comenzar ahora
+              Reservar cita
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg">
-              Explorar comunidad
+              Ver servicios
             </Button>
           </div>
         </div>
         
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {[
-            { value: "10K+", label: "Miembros activos" },
-            { value: "500+", label: "Proyectos creados" },
-            { value: "95%", label: "Satisfacción" },
-            { value: "24/7", label: "Soporte" },
+            { value: "15+", label: "Años de experiencia" },
+            { value: "5000+", label: "Clientes satisfechos" },
+            { value: "98%", label: "Recomendación" },
+            { value: "20+", label: "Tratamientos" },
           ].map((stat, index) => (
             <div 
               key={index}
