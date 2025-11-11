@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import BookingModal from "./BookingModal";
 
 const CTA = () => {
+  const navigate = useNavigate();
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   return (
     <section className="py-24 px-4 bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-primary opacity-10" />
@@ -27,11 +32,11 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={() => setBookingModalOpen(true)}>
               Reservar ahora
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={() => navigate("/contacto")}>
               Contactar
             </Button>
           </div>
@@ -41,6 +46,8 @@ const CTA = () => {
           </p>
         </div>
       </div>
+      
+      <BookingModal open={bookingModalOpen} onOpenChange={setBookingModalOpen} />
     </section>
   );
 };

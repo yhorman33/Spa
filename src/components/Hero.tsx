@@ -1,8 +1,13 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import spaHero from "@/assets/spa-hero.jpg";
+import BookingModal from "./BookingModal";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <div 
@@ -33,11 +38,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={() => setBookingModalOpen(true)}>
               Reservar cita
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={() => navigate("/servicios")}>
               Ver servicios
             </Button>
           </div>
@@ -65,6 +70,8 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      
+      <BookingModal open={bookingModalOpen} onOpenChange={setBookingModalOpen} />
     </section>
   );
 };
