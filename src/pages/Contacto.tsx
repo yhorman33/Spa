@@ -33,17 +33,17 @@ const Contacto = () => {
     {
       icon: MapPin,
       title: "Dirección",
-      content: "Av. Reforma 123, Col. Centro, CDMX",
+      content: "Av. Santa Fe 1860, Palermo, Buenos Aires",
     },
     {
       icon: Phone,
       title: "Teléfono",
-      content: "+52 55 1234 5678",
+      content: "+54 11 4587 9234",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contacto@spawellness.com",
+      content: "contacto@spawellness.gmail.com",
     },
     {
       icon: Clock,
