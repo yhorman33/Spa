@@ -43,7 +43,7 @@ const Contacto = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "contacto@spawellness.gmail.com",
+      content: "spawellness@gmail.com",
     },
     {
       icon: Clock,
