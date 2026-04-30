@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "Inicio" },
     { href: "/servicios", label: "Servicios" },
+    { href: "/escuela", label: "Escuela" },
     { href: "/contacto", label: "Contacto" },
   ];
 
@@ -23,10 +24,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 font-bold text-xl">
             <div className="p-2 rounded-lg bg-gradient-primary">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
+              <Building2 className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Spa & Wellness
+              MP Consultor
             </span>
           </Link>
 

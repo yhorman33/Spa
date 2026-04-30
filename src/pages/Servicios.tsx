@@ -3,90 +3,78 @@ import Navbar from "@/components/Navbar";
 import BookingModal from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, DollarSign } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const services = [
   {
-    category: "Masajes",
+    category: "Asesoramiento y Consultoría",
+    description: "Asesoramos a inmobiliarias, desarrolladores y constructoras desde 2001.",
     items: [
-      {
-        name: "Masaje relajante",
-        duration: "60 min",
-        price: "$800",
-        description: "Masaje suave con aceites aromáticos para relajación profunda y alivio del estrés.",
-      },
-      {
-        name: "Masaje terapéutico",
-        duration: "90 min",
-        price: "$1,200",
-        description: "Masaje de tejido profundo para aliviar dolores musculares y mejorar la circulación.",
-      },
-      {
-        name: "Masaje con piedras calientes",
-        duration: "75 min",
-        price: "$1,000",
-        description: "Terapia con piedras volcánicas calientes para relajación muscular profunda.",
-      },
+      "Analizamos la situación comercial actual de la empresa.",
+      "Diagnóstico de fortalezas y debilidades para el crecimiento.",
+      "Definimos nuevos objetivos, plazos e inversión necesaria.",
+      "Planificamos el nuevo proyecto comercial: estrategia y metodología.",
+      "Determinamos cuotas de resultado y tiempos para alcanzarlas.",
+      "Analizamos, capacitamos y entrenamos al personal actual.",
+      "Tomamos y formamos nuevo personal si es necesario.",
     ],
   },
   {
-    category: "Tratamientos faciales",
+    category: "Dirección y Gerenciamiento",
+    description: "Planes de negocio, estrategia, creatividad e implementación de objetivos.",
     items: [
-      {
-        name: "Facial hidratante",
-        duration: "60 min",
-        price: "$900",
-        description: "Limpieza profunda, exfoliación e hidratación intensa para todo tipo de piel.",
-      },
-      {
-        name: "Facial anti-edad",
-        duration: "75 min",
-        price: "$1,300",
-        description: "Tratamiento con colágeno y ácido hialurónico para reducir líneas de expresión.",
-      },
-      {
-        name: "Facial purificante",
-        duration: "60 min",
-        price: "$850",
-        description: "Limpieza profunda para piel grasa, elimina impurezas y controla el brillo.",
-      },
+      "Estadísticas, proyecciones y sistemas de control semanales y mensuales.",
+      "Implementación de metodologías innovadoras en tasaciones, producción y ventas.",
+      "Campañas promocionales y publicitarias para imagen institucional.",
+      "Sistemas de gestión informáticos para control y distribución de información.",
+      "Banco de clientes y fidelización para asegurar cartera futura.",
+      "Capacitación constante al personal, gerentes y titulares.",
+      "Coaching para titulares y gerentes para mejorar la dirección.",
     ],
   },
   {
-    category: "Tratamientos corporales",
+    category: "Marketing Inmobiliario y Financiero",
+    description: "Especialistas en marketing inmobiliario, estrategia y gerenciamiento.",
     items: [
-      {
-        name: "Exfoliación corporal",
-        duration: "45 min",
-        price: "$700",
-        description: "Exfoliación completa con sales marinas y aceites naturales.",
-      },
-      {
-        name: "Envoltura de algas",
-        duration: "60 min",
-        price: "$950",
-        description: "Tratamiento desintoxicante y reafirmante con algas marinas.",
-      },
-      {
-        name: "Paquete spa completo",
-        duration: "180 min",
-        price: "$2,500",
-        description: "Masaje + facial + envoltura corporal. Experiencia de lujo completa.",
-      },
+      "Marketing inmobiliario con estrategia.",
+      "Hipotecas e Inversiones.",
+      "Posicionamiento y mejor competitividad.",
+      "Estudio de mercado para asegurar resultados.",
+      "Mayor captación y producción de propiedades.",
+      "Mejor imagen institucional y rentabilidad.",
+    ],
+  },
+];
+
+const cases = [
+  {
+    name: "Empresa Inmobiliaria de Flores",
+    points: [
+      "Año 2022: Inicio gerenciamiento — 40 operaciones anuales.",
+      "Año 2023: 80 operaciones anuales.",
+      "Año 2024: Apertura de 6 franquicias en CABA — 100 operaciones anuales.",
+      "Año 2025: Más de 100 operaciones anuales.",
+    ],
+  },
+  {
+    name: "Empresa Inmobiliaria de Belgrano",
+    points: [
+      "Año 2023: La empresa firmaba 20 operaciones anuales.",
+      "Año 2024: Inicio gerenciamiento — 30 operaciones anuales.",
+      "Año 2025: Proyección de cierre con 80 operaciones anuales.",
     ],
   },
 ];
 
 const Servicios = () => {
-  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       <main className="pt-24 pb-16 px-4">
-        <div className="container mx-auto">
-          {/* Header */}
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Nuestros{" "}
@@ -94,74 +82,74 @@ const Servicios = () => {
                 servicios
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Descubre nuestra variedad de tratamientos diseñados para tu bienestar
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Asesoramiento y consultoría a inmobiliarias, desarrolladores y constructoras
             </p>
           </div>
 
-          {/* Services by category */}
           <div className="space-y-12">
-            {services.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <h2 className="text-3xl font-bold mb-6 text-primary">
-                  {category.category}
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.items.map((service, serviceIndex) => (
-                    <Card
-                      key={serviceIndex}
-                      className="border-border/50 hover:border-primary/50 transition-all hover:shadow-card group"
-                    >
-                      <CardHeader>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                          {service.name}
-                        </CardTitle>
-                        <CardDescription className="text-base">
-                          {service.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="flex items-center justify-between text-sm">
-                          <div className="flex items-center gap-2 text-muted-foreground">
-                            <Clock className="w-4 h-4" />
-                            {service.duration}
-                          </div>
-                          <div className="flex items-center gap-2 font-semibold text-primary text-lg">
-                            <DollarSign className="w-4 h-4" />
-                            {service.price}
-                          </div>
-                        </div>
-                        <Button
-                          variant="hero"
-                          className="w-full"
-                          onClick={() => setBookingModalOpen(true)}
-                        >
-                          Reservar
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
+            {services.map((cat, i) => (
+              <Card key={i} className="border-border/50">
+                <CardHeader>
+                  <CardTitle className="text-2xl md:text-3xl text-primary">{cat.category}</CardTitle>
+                  <CardDescription className="text-base">{cat.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="grid md:grid-cols-2 gap-3">
+                    {cat.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
-          {/* CTA Section */}
+          {/* Resultados */}
+          <div className="mt-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+              Resultados obtenidos en{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">gerenciamiento</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {cases.map((c, i) => (
+                <Card key={i} className="border-border/50 bg-gradient-hero">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{c.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {c.points.map((p, j) => (
+                        <li key={j} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-1 shrink-0" />
+                          <span className="text-sm text-muted-foreground">{p}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-20 text-center bg-gradient-hero rounded-3xl p-12 border border-border/50">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              ¿No encuentras lo que buscas?
+              ¿Querés un diagnóstico para tu empresa?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Podemos crear un paquete personalizado según tus necesidades
+              Coordinemos una entrevista sin cargo y analizamos juntos tu negocio.
             </p>
-            <Button variant="hero" size="lg" onClick={() => setBookingModalOpen(true)}>
-              Contactar para paquete personalizado
+            <Button variant="hero" size="lg" onClick={() => setOpen(true)}>
+              Solicitar entrevista
             </Button>
           </div>
         </div>
       </main>
 
-      <BookingModal open={bookingModalOpen} onOpenChange={setBookingModalOpen} />
+      <BookingModal open={open} onOpenChange={setOpen} />
     </div>
   );
 };
