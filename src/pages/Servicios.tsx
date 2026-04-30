@@ -4,6 +4,8 @@ import BookingModal from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import handshakeImg from "@/assets/handshake-deal.jpg";
+import propertyImg from "@/assets/property-buenos-aires.jpg";
 
 const services = [
   {
@@ -85,6 +87,25 @@ const Servicios = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Asesoramiento y consultoría a inmobiliarias, desarrolladores y constructoras
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 group">
+              <img src={propertyImg} alt="Propiedades en Buenos Aires" loading="lazy" width={1280} height={800} className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl font-bold mb-1">Marketing Inmobiliario</h3>
+                <p className="text-sm text-muted-foreground">Estrategias para captar más propiedades y clientes.</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 group">
+              <img src={handshakeImg} alt="Cerramos operaciones" loading="lazy" width={1280} height={800} className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl font-bold mb-1">Más operaciones cerradas</h3>
+                <p className="text-sm text-muted-foreground">Resultados medibles en ventas, tasaciones y reservas.</p>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-12">

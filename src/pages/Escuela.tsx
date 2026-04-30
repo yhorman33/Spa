@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Users, BookOpen, Award } from "lucide-react";
+import trainingImg from "@/assets/training-class.jpg";
+import teamImg from "@/assets/team-meeting.jpg";
 
 const cursos = [
   {
@@ -71,6 +73,21 @@ const Escuela = () => {
             </p>
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden border border-border/50 mb-16">
+            <img src={trainingImg} alt="Clases y capacitación" loading="lazy" width={1280} height={800} className="w-full h-80 md:h-96 object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+            <div className="absolute inset-0 flex items-center p-8 md:p-16">
+              <div className="max-w-md">
+                <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                  Formación práctica e intensiva
+                </h2>
+                <p className="text-muted-foreground">
+                  Conocé el día a día del negocio inmobiliario y financiero con nuestros docentes especializados.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Intro */}
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             <Card className="border-border/50">
@@ -127,6 +144,10 @@ const Escuela = () => {
             {empresas.map((e, i) => (
               <Badge key={i} variant="outline" className="text-sm py-2 px-4">{e}</Badge>
             ))}
+          </div>
+
+          <div className="rounded-2xl overflow-hidden border border-border/50 mb-12">
+            <img src={teamImg} alt="Equipo profesional" loading="lazy" width={1280} height={800} className="w-full h-72 object-cover" />
           </div>
 
           {/* Trayectoria */}
