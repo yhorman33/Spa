@@ -27,7 +27,7 @@ const Navbar = () => {
               <Building2 className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              MP Consultor
+              MP Consultora
             </span>
           </Link>
 
