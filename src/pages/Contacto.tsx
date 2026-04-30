@@ -31,24 +31,19 @@ const Contacto = () => {
 
   const contactInfo = [
     {
-      icon: MapPin,
-      title: "Dirección",
-      content: "Av. Santa Fe 1860, CABA, Buenos Aires",
-    },
-    {
       icon: Phone,
       title: "Teléfono / Celular",
-      content: "Tel.: 4634-2663 • Cel.: 155 344-6040",
+      content: "+54 9 11 6253 6040",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "marcelorponce@hotmail.com",
+      content: "marcelorponce@gmail.com",
     },
     {
       icon: Clock,
       title: "Horario de atención",
-      content: "Lun - Vie: 9:00 - 18:00",
+      content: "24 horas",
     },
   ];
 

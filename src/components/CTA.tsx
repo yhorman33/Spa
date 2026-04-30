@@ -42,7 +42,7 @@ const CTA = () => {
           </div>
 
           <p className="text-sm text-muted-foreground mt-8">
-            Tel.: 4634-2663 • Cel.: 155 344-6040 • marcelorponce@hotmail.com
+            +54 9 11 6253 6040 • marcelorponce@gmail.com • Atención 24 hs
           </p>
         </div>
       </div>
