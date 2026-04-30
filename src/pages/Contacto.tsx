@@ -33,22 +33,22 @@ const Contacto = () => {
     {
       icon: MapPin,
       title: "Dirección",
-      content: "Av. Santa Fe 1860, Palermo, Buenos Aires",
+      content: "Av. Santa Fe 1860, CABA, Buenos Aires",
     },
     {
       icon: Phone,
-      title: "Teléfono",
-      content: "+54 11 4587 9234",
+      title: "Teléfono / Celular",
+      content: "Tel.: 4634-2663 • Cel.: 155 344-6040",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "spawellness@gmail.com",
+      content: "marcelorponce@hotmail.com",
     },
     {
       icon: Clock,
-      title: "Horario",
-      content: "Lun - Dom: 9:00 - 21:00",
+      title: "Horario de atención",
+      content: "Lun - Vie: 9:00 - 18:00",
     },
   ];
 

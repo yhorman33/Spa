@@ -1,37 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Droplets, Heart, Sparkles, Flower2, Leaf, Wind } from "lucide-react";
+import {
+  TrendingUp, Users, Target, Building2, BarChart3, Award,
+  Megaphone, ClipboardList, Briefcase, GraduationCap, Shield, LineChart
+} from "lucide-react";
 
 const features = [
-  {
-    icon: Droplets,
-    title: "Masajes terapéuticos",
-    description: "Alivia tensiones y recupera tu bienestar con técnicas profesionales personalizadas.",
-  },
-  {
-    icon: Heart,
-    title: "Tratamientos faciales",
-    description: "Rejuvenece tu piel con productos premium y tecnología de última generación.",
-  },
-  {
-    icon: Sparkles,
-    title: "Tratamientos corporales",
-    description: "Exfoliación, hidratación y renovación completa para tu piel.",
-  },
-  {
-    icon: Flower2,
-    title: "Aromaterapia",
-    description: "Experimenta el poder curativo de los aceites esenciales naturales.",
-  },
-  {
-    icon: Leaf,
-    title: "Productos naturales",
-    description: "Utilizamos productos orgánicos certificados para tu seguridad y bienestar.",
-  },
-  {
-    icon: Wind,
-    title: "Ambiente zen",
-    description: "Espacios diseñados para tu máxima relajación y desconexión total.",
-  },
+  { icon: TrendingUp, title: "Mayor cantidad de reservas", description: "Estrategias que incrementan las reservas y captación efectiva." },
+  { icon: Building2, title: "Mayor cantidad de tasaciones", description: "Metodologías para aumentar tasaciones y producción." },
+  { icon: Award, title: "Mejor imagen institucional", description: "Posicionamos tu marca con campañas profesionales." },
+  { icon: Megaphone, title: "Marketing inmobiliario con estrategia", description: "Planes de marketing diseñados para el sector inmobiliario." },
+  { icon: Users, title: "Fidelización de clientes", description: "Sistemas de gestión y banco de clientes para futuro." },
+  { icon: Target, title: "Posicionamiento y competitividad", description: "Te ayudamos a defender y ganar mercado." },
+  { icon: BarChart3, title: "Estudio de mercado", description: "Análisis para asegurar resultados concretos." },
+  { icon: Briefcase, title: "Dirección y gerenciamiento", description: "Gerenciamos con profesionalidad tu empresa." },
+  { icon: ClipboardList, title: "Mejor administración y organización", description: "Optimizamos procesos internos y cuotas de resultado." },
+  { icon: LineChart, title: "Análisis y planificación", description: "Definimos objetivos comerciales claros y medibles." },
+  { icon: Shield, title: "Proyectos más seguros y rentables", description: "Reducimos riesgos y maximizamos la rentabilidad." },
+  { icon: GraduationCap, title: "Personal más preparado", description: "Capacitamos y entrenamos a tu equipo." },
 ];
 
 const Features = () => {
@@ -40,22 +25,22 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Nuestros{" "}
+            Lo que{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              servicios
+              logramos juntos
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experiencias únicas de bienestar diseñadas para ti
+            Resultados concretos para inmobiliarias, desarrolladores y constructoras
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card 
+            <Card
               key={index}
               className="border-border/50 hover:border-primary/50 transition-all hover:shadow-card group animate-fade-in bg-card/50 backdrop-blur-sm"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               <CardContent className="pt-6">
                 <div className="mb-4 inline-flex p-3 rounded-xl bg-gradient-primary group-hover:scale-110 transition-transform">
@@ -64,9 +49,7 @@ const Features = () => {
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">
-                  {feature.description}
-                </p>
+                <p className="text-muted-foreground">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
